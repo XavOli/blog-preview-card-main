@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(47, 88%, 63%);
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Figtree', sans-serif;
+    border-radius: 20px;
+    padding: 24px;
+    gap:24px;
+    box-shadow: 8px 8px 0px black;
+    width: 384px;
+    height: 528px;
+    border-style: solid;
+    border-width: 1px;
+    transition-duration: 0.5s;
+}
+.container:hover{
+    box-shadow: 16px 16px 0px black;
+}
+
+.container:hover .cardTitle{
+    color: hsl(47, 88%, 63%);
+}
+.blogImage img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    width: 100%;
+    height: 194px;
+    letter-spacing: 0px;
+    line-height: 150%;
+}
+
+.category{
+    background-color: hsl(47, 88%, 63%);
+    color: hsl(0, 0%, 7%);
+    width: fit-content;
+    height: fit-content;
+    padding: 4px 12px;
+    gap: 8px;
+    border-radius: 4px;
+    font-size:16px;
+    font-weight: 800;
+}
+
+.date{
+    color: hsl(0, 0%, 7%);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.cardTitle{
+    font-weight: 800;
+    color: hsl(0, 0%, 7%);
+    font-size: 24px;
+    transition-duration: 0.5s;
+}
+
+.description{
+    color: hsl(0, 0%, 42%);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    gap:12px;
+    color: hsl(0, 0%, 7%);
+}
+
+.userPic img{
+    height: 32px;
+    width: 32px;
+}
+
+.authorName{
+    color: hsl(0, 0%, 7%);
+    font-weight: 900;
+}
+
+@media screen and (max-width:500px){
+    .container{
+        width: 85vw;
+    }
+    .attribution{
+        display: none;
+    }
+}
+
+@media screen and (max-width:950px) and (orientation:landscape){
+    .container{
+        max-height: 80vh;
+        height: auto;
+        gap:12px;
+        padding: 12px;
+    }
+    .content{
+        height: auto;
+        line-height: 105%;
+    }
+    .blogImage{
+        display: none;
+    }
+    .attribution{
+        display: none;
+    }
+
+}
+.attribution{
+    font-size: 11px; 
+    text-align: center;
+    position: fixed;
+    bottom:15px;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
