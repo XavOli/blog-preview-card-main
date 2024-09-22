@@ -89,6 +89,8 @@ html,body{
     align-items: center;
     gap:12px;
     color: hsl(0, 0%, 7%);
+    font-size:14px;
+    font-weight: 500;
 }
 
 .userPic img{
